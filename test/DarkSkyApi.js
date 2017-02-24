@@ -1,12 +1,11 @@
 const expect = require('expect.js')
-const apiKey = require('../src/apikey')
 const DarkSkyApi = require('../src/DarkSkyApi')
 
 describe('DarkSkyApi', () => {
 	let darkSkyApi
 
 	beforeEach(() => {
-		darkSkyApi = new DarkSkyApi(process.env.API_KEY || apiKey)
+		darkSkyApi = new DarkSkyApi(process.env.API_KEY || require('../src/apikey'))
 	})
 
 	it('get forecast', async () => {
