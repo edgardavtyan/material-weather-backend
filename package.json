@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -c",
+    "test": "mocha --colors --recursive --harmony-async-await",
     "watch": "nodemon --harmony-async-await src/app",
     "start": "node --harmony-async-await src/app"
   },
