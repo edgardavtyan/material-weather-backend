@@ -2,7 +2,7 @@ class DarkSkyApiJsonConverter {
 	convert(forecast, address) {
 		const result = {
 			date: forecast.currently.time,
-			location: address.location,
+			location: address.location.replace('Kiev', 'Kyiv'),
 			condition: forecast.currently.summary,
 			dailySummary: forecast.daily.summary,
 			todaySummary: forecast.hourly.summary,
