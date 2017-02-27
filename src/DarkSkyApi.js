@@ -10,12 +10,12 @@ class DarkSkyApi {
 	}
 
 	async getForecast(location) {
-		const coordinates = await this.geocoder.getCoordinates(location)
+		const address = await this.geocoder.getCoordinates(location)
 		const url = `https://api.darksky.net/forecast/${this.apiKey}/`
-		          + `${coordinates.latitude},${coordinates.longitude}`
+		          + `${address.latitude},${address.longitude}`
 		          + `?units=si`
 		const forecast = JSON.parse((await request(url)).body)
-		return this.jsonConverter.convert(forecast)
+		return this.jsonConverter.convert(forecast, address)
 	}
 }
 
