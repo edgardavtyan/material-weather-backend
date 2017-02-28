@@ -27,7 +27,7 @@ class DarkSkyApiJsonConverter {
 				sunriseTime: dailyForecast.sunriseTime,
 				sunsetTime: dailyForecast.sunsetTime,
 				precipIntensity: dailyForecast.precipIntensity,
-				precipProbability: dailyForecast.precipProbability,
+				precipProbability: dailyForecast.precipProbability * 100,
 				temperatureMin: dailyForecast.temperatureMin,
 				temperatureMax: dailyForecast.temperatureMax,
 				humidity: dailyForecast.humidity,
