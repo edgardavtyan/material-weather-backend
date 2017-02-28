@@ -1,7 +1,7 @@
 class DarkSkyApiJsonConverter {
 	convert(forecast, address) {
 		const result = {
-			date: forecast.currently.time,
+			date: forecast.currently.time * 1000,
 			location: address.location.replace('Kiev', 'Kyiv'),
 			condition: forecast.currently.summary,
 			dailySummary: forecast.daily.summary,
@@ -21,7 +21,7 @@ class DarkSkyApiJsonConverter {
 		for (let i = 0; i < forecast.daily.data.length; i++) {
 			const dailyForecast = forecast.daily.data[i]
 			result.daily[i] = {
-				date: dailyForecast.time,
+				date: dailyForecast.time * 1000,
 				summary: dailyForecast.summary,
 				icon: dailyForecast.icon,
 				sunriseTime: dailyForecast.sunriseTime,
