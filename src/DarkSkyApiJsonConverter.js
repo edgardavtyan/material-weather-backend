@@ -7,7 +7,7 @@ class DarkSkyApiJsonConverter {
 			dailySummary: forecast.daily.summary,
 			todaySummary: forecast.hourly.summary,
 			icon: forecast.currently.icon,
-			precipChance: forecast.currently.precipProbability,
+			precipChance: forecast.currently.precipProbability * 100,
 			temperature: forecast.currently.temperature,
 			temperatureMin: forecast.daily.data[0].temperatureMin,
 			temperatureMax: forecast.daily.data[0].temperatureMax,
