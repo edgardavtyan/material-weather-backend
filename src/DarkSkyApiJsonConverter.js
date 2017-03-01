@@ -15,7 +15,7 @@ class DarkSkyApiJsonConverter {
 			humidity: forecast.currently.humidity,
 			windSpeed: forecast.currently.windSpeed,
 			pressure: forecast.currently.presure,
-		}
+		} // comment
 
 		result.daily = []
 		for (let i = 0; i < forecast.daily.data.length; i++) {
